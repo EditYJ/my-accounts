@@ -4,6 +4,10 @@ import React from "react";
 
 import PriceList from "./components/PriceList";
 
+import ViewTab from "./components/ViewTab"
+
+import { LIST_VIEW, CHART_VIEW } from "./utility";
+
 const items = [
   {
     id: 1,
@@ -42,6 +46,9 @@ function App() {
         onDeleteItem={item => {
           alert(item.id);
         }}
+      />
+      <ViewTab 
+        activTab={CHART_VIEW}
       />
     </div>
   );
