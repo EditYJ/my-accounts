@@ -4,9 +4,10 @@ import React from "react";
 
 import PriceList from "./components/PriceList";
 
-import ViewTab from "./components/ViewTab"
+import ViewTab from "./components/ViewTab";
 
 import { LIST_VIEW, CHART_VIEW } from "./utility";
+import TotalPrice from "./components/TotalPrice";
 
 const items = [
   {
@@ -47,9 +48,8 @@ function App() {
           alert(item.id);
         }}
       />
-      <ViewTab 
-        activTab={CHART_VIEW}
-      />
+      <ViewTab activTab={CHART_VIEW} />
+      <TotalPrice income={2003} outcome={5000} />
     </div>
   );
 }
