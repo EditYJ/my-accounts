@@ -1,4 +1,6 @@
 import React from "react";
+import Ionicon from "react-ionicons";
+import PropTypes from "prop-types";
 
 const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
   return (
@@ -8,8 +10,14 @@ const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
           className="list-group-item d-flex justify-content-between align-items-center"
           key={item.id}
         >
-          <span className="col-1 badge badge-primary">
-            {item.category.name}
+          <span className="col-1">
+            <Ionicon
+              className="rounded-circle"
+              fontSize="30px"
+              style={{ backgroundColor: "#007bff", padding: "5px" }}
+              color={"#fff"}
+              icon={item.category.iconName}
+            />
           </span>
           <span className="col-5">{item.title}</span>
           <span className="col-2 font-weight-bold">
@@ -17,26 +25,48 @@ const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
             {item.price}元
           </span>
           <span className="col-2">{item.date}</span>
-          <button
-            className="col-1 btn btn-primary"
+          <span
+            className="col-1"
             onClick={() => {
               onModifyItem(item);
             }}
           >
-            编辑
-          </button>
-          <button
-            className="col-1 btn btn-danger"
+            <Ionicon
+              className="rounded-circle"
+              fontSize="30px"
+              style={{ backgroundColor: "#28a745", padding: "5px" }}
+              color={"#fff"}
+              icon="ios-create-outline"
+            />
+          </span>
+          <span
+            className="col-1"
             onClick={() => {
               onDeleteItem(item);
             }}
           >
-            删除
-          </button>
+            <Ionicon
+              className="rounded-circle"
+              fontSize="30px"
+              style={{ backgroundColor: "#dc3545", padding: "5px" }}
+              color={"#fff"}
+              icon="ios-close"
+            />
+          </span>
         </li>
       ))}
     </ul>
   );
+};
+
+PriceList.propTypes = {
+  items: PropTypes.array.isRequired,
+  onModifyItem: PropTypes.func.isRequired,
+  onDeleteItem: PropTypes.func.isRequired
+};
+PriceList.defaultProps = {
+  onModifyItem: () => {},
+  onDeleteItem: () => {}
 };
 
 export default PriceList;

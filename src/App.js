@@ -1,4 +1,3 @@
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import React from "react";
@@ -14,7 +13,8 @@ const items = [
     category: {
       id: 1,
       name: "旅行",
-      type: "outcome"
+      type: "outcome",
+      iconName: "ios-plane"
     }
   },
   {
@@ -25,7 +25,8 @@ const items = [
     category: {
       id: 1,
       name: "旅行",
-      type: "income"
+      type: "income",
+      iconName: "ios-plane"
     }
   }
 ];
