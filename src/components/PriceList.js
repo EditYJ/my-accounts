@@ -1,6 +1,6 @@
-import React from "react";
-import Ionicon from "react-ionicons";
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+import React from 'react';
+import Ionicon from 'react-ionicons';
 
 const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
   return (
@@ -19,7 +19,9 @@ const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
               icon={item.category.iconName}
             />
           </span>
-          <span className="col-5">{item.title}</span>
+          <span className="col-5" style={{ textAlign: "center" }}>
+            {item.title}
+          </span>
           <span className="col-2 font-weight-bold">
             {item.category.type === "income" ? "+" : "-"}
             {item.price}元
