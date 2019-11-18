@@ -44,7 +44,7 @@ const items = [
     id: 2,
     title: "买了一些吃的",
     price: 150,
-    date: "2019-07-11",
+    date: "2019-06-11",
     cid: 2
   },
   {
@@ -79,10 +79,9 @@ class Home extends React.Component {
     });
   };
 
-  changeDate = (isAll, year, month) => {
+  changeDate = (year, month) => {
     this.setState({
       currentDate: {
-        isAll,
         year,
         month
       }
@@ -125,10 +124,12 @@ class Home extends React.Component {
         return item;
       })
       .filter(item => {
-        return this.state.currentDate.isAll || item.date.includes(
-          `${this.state.currentDate.year}-${addZero(
-            this.state.currentDate.month
-          )}`
+        return (
+          item.date.includes(
+            `${this.state.currentDate.year}-${addZero(
+              this.state.currentDate.month
+            )}`
+          )
         );
       });
     return (

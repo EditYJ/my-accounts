@@ -9,7 +9,7 @@ class MonthPicker extends React.Component {
     super(props);
     this.state = {
       isOpen: false,
-      selectedYear: this.props.year,
+      selectedYear: this.props.year
       // selectedMonth: this.props.month
     };
   }
@@ -29,13 +29,13 @@ class MonthPicker extends React.Component {
     });
   };
 
-  toggleMonthLis = (event, isAll, monthNumber) => {
+  toggleMonthLis = (event, monthNumber) => {
     event.preventDefault();
     this.setState({
       isOpen: false
       // selectedMonth: monthNumber
     });
-    this.props.onChange(isAll, this.state.selectedYear, monthNumber);
+    this.props.onChange(this.state.selectedYear, monthNumber);
   };
 
   render() {
@@ -51,11 +51,11 @@ class MonthPicker extends React.Component {
           className="btn btn-secondary dropdown-toggle"
           onClick={this.toggleDropdown}
         >
-          {month ? `${year}年 ${addZero(month)}月` : "全部"}
+          {`${year}年 ${addZero(month)}月`}
         </button>
         {isOpen && (
           <div className="dropdown-menu" style={{ display: "block" }}>
-            <div
+            {/* <div
               className="row"
               style={{ display: "flex", "justify-content": "center" }}
             >
@@ -66,7 +66,7 @@ class MonthPicker extends React.Component {
               >
                 查询全部
               </a>
-            </div>
+            </div> */}
             <div className="row">
               <div className="col border-right">
                 {yearRange.map((yearNumber, index) => {
@@ -92,9 +92,7 @@ class MonthPicker extends React.Component {
                       key={index}
                       href="#"
                       className={viewActive(monthNumber, month)}
-                      onClick={event =>
-                        this.toggleMonthLis(event, false, monthNumber)
-                      }
+                      onClick={event => this.toggleMonthLis(event, monthNumber)}
                     >
                       {addZero(monthNumber)}月
                     </a>
