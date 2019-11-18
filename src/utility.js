@@ -16,3 +16,12 @@ export const range = (size, startAt = 0) => {
 export const viewActive = (id, selectedId) => {
   return id === selectedId ? "dropdown-item active" : "dropdown-item";
 };
+
+export const parseToYearAndMounth = str => {
+  const date = str ? new Date(str) : new Date();
+
+  return {
+    year: date.getFullYear(),
+    month: date.getMonth() + 1
+  };
+};
