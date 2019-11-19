@@ -1,0 +1,272 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test PriceList component should render the component to match snapshot 1`] = `
+<ul
+  className="list-group list-grop-flush"
+>
+  <li
+    className="list-group-item d-flex justify-content-between align-items-center"
+    key="1"
+  >
+    <span
+      className="col-1"
+    >
+      <Ionicon
+        beat={false}
+        className="rounded-circle show-category"
+        color="#fff"
+        fontSize="30px"
+        icon="ios-plane"
+        rotate={false}
+        shake={false}
+        style={
+          Object {
+            "backgroundColor": "#007bff",
+            "padding": "5px",
+          }
+        }
+      />
+    </span>
+    <span
+      className="col-5 pl-title"
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      去日本旅游
+    </span>
+    <span
+      className="col-2 font-weight-bold pl-price"
+    >
+      -
+      200
+      元
+    </span>
+    <span
+      className="col-2 pl-date"
+    >
+      2019-06-24
+    </span>
+    <a
+      className="col-1"
+      href="#"
+      onClick={[Function]}
+    >
+      <Ionicon
+        beat={false}
+        className="rounded-circle"
+        color="#fff"
+        fontSize="30px"
+        icon="ios-create-outline"
+        rotate={false}
+        shake={false}
+        style={
+          Object {
+            "backgroundColor": "#28a745",
+            "padding": "5px",
+          }
+        }
+      />
+    </a>
+    <a
+      className="col-1"
+      href="#"
+      onClick={[Function]}
+    >
+      <Ionicon
+        beat={false}
+        className="rounded-circle"
+        color="#fff"
+        fontSize="30px"
+        icon="ios-close"
+        rotate={false}
+        shake={false}
+        style={
+          Object {
+            "backgroundColor": "#dc3545",
+            "padding": "5px",
+          }
+        }
+      />
+    </a>
+  </li>
+  <li
+    className="list-group-item d-flex justify-content-between align-items-center"
+    key="2"
+  >
+    <span
+      className="col-1"
+    >
+      <Ionicon
+        beat={false}
+        className="rounded-circle show-category"
+        color="#fff"
+        fontSize="30px"
+        icon="ios-pizza"
+        rotate={false}
+        shake={false}
+        style={
+          Object {
+            "backgroundColor": "#007bff",
+            "padding": "5px",
+          }
+        }
+      />
+    </span>
+    <span
+      className="col-5 pl-title"
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      买了一些吃的
+    </span>
+    <span
+      className="col-2 font-weight-bold pl-price"
+    >
+      -
+      150
+      元
+    </span>
+    <span
+      className="col-2 pl-date"
+    >
+      2019-06-11
+    </span>
+    <a
+      className="col-1"
+      href="#"
+      onClick={[Function]}
+    >
+      <Ionicon
+        beat={false}
+        className="rounded-circle"
+        color="#fff"
+        fontSize="30px"
+        icon="ios-create-outline"
+        rotate={false}
+        shake={false}
+        style={
+          Object {
+            "backgroundColor": "#28a745",
+            "padding": "5px",
+          }
+        }
+      />
+    </a>
+    <a
+      className="col-1"
+      href="#"
+      onClick={[Function]}
+    >
+      <Ionicon
+        beat={false}
+        className="rounded-circle"
+        color="#fff"
+        fontSize="30px"
+        icon="ios-close"
+        rotate={false}
+        shake={false}
+        style={
+          Object {
+            "backgroundColor": "#dc3545",
+            "padding": "5px",
+          }
+        }
+      />
+    </a>
+  </li>
+  <li
+    className="list-group-item d-flex justify-content-between align-items-center"
+    key="3"
+  >
+    <span
+      className="col-1"
+    >
+      <Ionicon
+        beat={false}
+        className="rounded-circle show-category"
+        color="#fff"
+        fontSize="30px"
+        icon="logo-yen"
+        rotate={false}
+        shake={false}
+        style={
+          Object {
+            "backgroundColor": "#007bff",
+            "padding": "5px",
+          }
+        }
+      />
+    </span>
+    <span
+      className="col-5 pl-title"
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      理财收入
+    </span>
+    <span
+      className="col-2 font-weight-bold pl-price"
+    >
+      +
+      200
+      元
+    </span>
+    <span
+      className="col-2 pl-date"
+    >
+      2019-09-10
+    </span>
+    <a
+      className="col-1"
+      href="#"
+      onClick={[Function]}
+    >
+      <Ionicon
+        beat={false}
+        className="rounded-circle"
+        color="#fff"
+        fontSize="30px"
+        icon="ios-create-outline"
+        rotate={false}
+        shake={false}
+        style={
+          Object {
+            "backgroundColor": "#28a745",
+            "padding": "5px",
+          }
+        }
+      />
+    </a>
+    <a
+      className="col-1"
+      href="#"
+      onClick={[Function]}
+    >
+      <Ionicon
+        beat={false}
+        className="rounded-circle"
+        color="#fff"
+        fontSize="30px"
+        icon="ios-close"
+        rotate={false}
+        shake={false}
+        style={
+          Object {
+            "backgroundColor": "#dc3545",
+            "padding": "5px",
+          }
+        }
+      />
+    </a>
+  </li>
+</ul>
+`;

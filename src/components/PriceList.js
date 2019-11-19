@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import Ionicon from 'react-ionicons';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import PropTypes from "prop-types";
+import React from "react";
+import Ionicon from "react-ionicons";
 
 const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
   return (
@@ -12,22 +13,23 @@ const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
         >
           <span className="col-1">
             <Ionicon
-              className="rounded-circle"
+              className="rounded-circle show-category"
               fontSize="30px"
               style={{ backgroundColor: "#007bff", padding: "5px" }}
               color={"#fff"}
               icon={item.category.iconName}
             />
           </span>
-          <span className="col-5" style={{ textAlign: "center" }}>
+          <span className="col-5 pl-title" style={{ textAlign: "center" }}>
             {item.title}
           </span>
-          <span className="col-2 font-weight-bold">
+          <span className="col-2 font-weight-bold pl-price">
             {item.category.type === "income" ? "+" : "-"}
             {item.price}元
           </span>
-          <span className="col-2">{item.date}</span>
-          <span
+          <span className="col-2 pl-date">{item.date}</span>
+          <a
+            href="#"
             className="col-1"
             onClick={() => {
               onModifyItem(item);
@@ -40,8 +42,9 @@ const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
               color={"#fff"}
               icon="ios-create-outline"
             />
-          </span>
-          <span
+          </a>
+          <a
+            href="#"
             className="col-1"
             onClick={() => {
               onDeleteItem(item);
@@ -54,7 +57,7 @@ const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
               color={"#fff"}
               icon="ios-close"
             />
-          </span>
+          </a>
         </li>
       ))}
     </ul>

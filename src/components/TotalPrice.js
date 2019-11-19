@@ -4,10 +4,10 @@ import PropTypes from "prop-types";
 const TotalPrice = ({ income, outcome }) => {
   return (
     <div className="row">
-      <h5 className="col">
+      <h5 className="col income">
         收入: <span>{income}</span>
       </h5>
-      <h5 className="col">
+      <h5 className="col outcome">
         支出: <span>{outcome}</span>
       </h5>
     </div>

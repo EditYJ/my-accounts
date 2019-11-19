@@ -12,7 +12,7 @@ import {
   addZero
 } from "../utility";
 
-const categories = {
+export const categories = {
   1: {
     id: 1,
     name: "旅行",
@@ -32,7 +32,7 @@ const categories = {
     iconName: "logo-yen"
   }
 };
-const items = [
+export const items = [
   {
     id: 1,
     title: "去日本旅游",
