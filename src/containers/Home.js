@@ -68,7 +68,7 @@ class Home extends React.Component {
     super(props);
     this.state = {
       items,
-      currentDate: parseToYearAndMounth(),
+      currentDate: parseToYearAndMounth('2019/06/11'),
       tabView: LIST_VIEW
     };
   }
