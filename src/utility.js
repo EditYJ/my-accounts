@@ -1,5 +1,7 @@
 export const LIST_VIEW = "list";
 export const CHART_VIEW = "chart";
+export const TYPE_INCOME = "income";
+export const TYPE_OUTCOME = "outcome";
 
 export const addZero = month => {
   return month < 10 ? "0" + month : month;

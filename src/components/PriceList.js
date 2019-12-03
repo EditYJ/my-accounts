@@ -2,6 +2,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 import Ionicon from "react-ionicons";
+import { TYPE_INCOME } from "../utility";
 
 const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
   return (
@@ -24,7 +25,7 @@ const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
             {item.title}
           </span>
           <span className="col-2 font-weight-bold pl-price">
-            {item.category.type === "income" ? "+" : "-"}
+            {item.category.type === TYPE_INCOME ? "+" : "-"}
             {item.price}元
           </span>
           <span className="col-2 pl-date">{item.date}</span>

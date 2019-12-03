@@ -9,26 +9,28 @@ import {
   LIST_VIEW,
   parseToYearAndMounth,
   CHART_VIEW,
-  addZero
+  addZero,
+  TYPE_INCOME,
+  TYPE_OUTCOME
 } from "../utility";
 
 export const categories = {
   1: {
     id: 1,
     name: "旅行",
-    type: "outcome",
+    type: TYPE_OUTCOME,
     iconName: "ios-plane"
   },
   2: {
     id: 2,
     name: "食物",
-    type: "outcome",
+    type: TYPE_OUTCOME,
     iconName: "ios-pizza"
   },
   3: {
     id: 3,
     name: "理财",
-    type: "income",
+    type: TYPE_INCOME,
     iconName: "logo-yen"
   }
 };
@@ -68,7 +70,7 @@ class Home extends React.Component {
     super(props);
     this.state = {
       items,
-      currentDate: parseToYearAndMounth('2019/06/11'),
+      currentDate: parseToYearAndMounth("2019/06/11"),
       tabView: LIST_VIEW
     };
   }
@@ -124,12 +126,10 @@ class Home extends React.Component {
         return item;
       })
       .filter(item => {
-        return (
-          item.date.includes(
-            `${this.state.currentDate.year}-${addZero(
-              this.state.currentDate.month
-            )}`
-          )
+        return item.date.includes(
+          `${this.state.currentDate.year}-${addZero(
+            this.state.currentDate.month
+          )}`
         );
       });
     return (
