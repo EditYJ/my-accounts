@@ -59,7 +59,7 @@ describe('测试分类选择组件(CategorySelect)', () => {
     expect(firstIcon.props().icon).toEqual(categories[0].iconName)
   })
 
-  it('如果选择了某一项，需要高亮', () => {
+  it('根据传入的类型高亮对应的项', () => {
     const wrapper = mount(<CategorySelect {...props_with_active} />)
     expect(wrapper.find('.category-item').first().hasClass('active')).toEqual(true)
   })

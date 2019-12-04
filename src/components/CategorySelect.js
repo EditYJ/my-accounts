@@ -27,28 +27,43 @@ class CategorySelect extends Component {
           {categories.map((category, index) => {
             const activeClassName =
               selectCategoryId === category.id
-                ? 'category-item col-3 active'
-                : 'category-item col-3'
+                ? 'rounded-circle active'
+                : 'rounded-circle'
             return (
               <div
-                className={activeClassName}
+                className="category-item col-3"
                 key={index}
                 onClick={event => {
                   this.selectCategory(event, category)
                 }}
               >
                 <Iconicon
-                  className="rounded-circle"
+                  className={activeClassName}
+                  style={{ border: '#000 1px solid', padding: '5px' }}
                   fontSize="50px"
                   color="#555"
                   icon={category.iconName}
                 />
+                <br></br>
+                <span>{category.name}</span>
               </div>
             )
           })}
         </div>
       </div>
     )
+  }
+}
+
+CategorySelect.protoType = {
+  categories: PropTypes.array.isRequired,
+  onSelectCategory: PropTypes.func.isRequired,
+  selectCategory: PropTypes.object.isRequired
+}
+
+CategorySelect.defaultProps = {
+  onSelectCategory: category => {
+    console.log('category', category)
   }
 }
 

@@ -2,6 +2,16 @@
   margin: 0 30px;
 }
 
+.active {
+  background-color: antiquewhite;
+}
+.rounded-circle {
+  cursor: pointer;
+}
+.category-item {
+  text-align: center;
+}
+
 .App-header {
   background-color: #282c34;
   padding: 20px;
